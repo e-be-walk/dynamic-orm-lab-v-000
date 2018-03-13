@@ -60,8 +60,8 @@ class InteractiveRecord
     attr.each do |key, value|
       sql = "SELECT * FROM #{self.table_name} WHERE #{key.to_s} = '#{value}'"
       array << DB[:conn].execute(sql)
-    end 
-    array.flatten 
+    end
+    array.flatten
   end
 
 end
